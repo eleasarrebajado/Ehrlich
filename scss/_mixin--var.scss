@@ -1,0 +1,54 @@
+$font_Fira--Sans: 'Fira Sans', sans-serif;
+$word-spacing: 0.9rem;
+$navBar-color: #483939;
+$transition: all 0.5s ease-in-out;
+
+@mixin flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@mixin flex-center-important{
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+}
+
+@mixin bgimg($background_img){
+    background: $background_img;
+}
+
+@mixin bgImage-style {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.4rem;
+        margin-top: 7rem;
+        background-size: cover;
+        width: 70%;
+        height: 60vh;
+        transform: scale(1.2);
+        box-shadow: 2px 15px 8px -11px rgba(0,0,0,0.27);
+}
+
+@mixin discriptions{
+        position: absolute;
+        margin-top: 1rem;
+        text-align: center;
+        display: flex;
+        padding: 0 2rem;
+        font-family: $font_Fira--Sans;
+        font-size: 0.9rem;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 70px;
+        background-color: #ffffff;
+        color: #463939;
+}
+
+@mixin wave-color($bgColor-wave){
+    background: $bgColor-wave;
+}

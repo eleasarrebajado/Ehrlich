@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,800;0,900;1,300;1,700&display=swap');
+@import '_responsive-style.scss';
+@import '_mixin--var.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fcf4ef;
+    max-width: 100%;
+}
+
+.banner{
+    background: url('../images/homepage-bg.jpg')no-repeat center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .header{
+        width: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        padding: 12px;
+
+        &_navBtn{
+            width: 10%;
+            @include flex-center;
+            position: relative;
+            flex: 10%;
+
+                &--bar{
+                    width: 100%;
+                    height: 4px;
+                    position: absolute;
+                    border-radius: 1rem;
+                    background-color: $navBar-color;
+
+                    &::before{
+                        content: '';
+                        top: -10px;
+                        z-index: 3;
+                        width: 100%;
+                        height: 4px;
+                        position: absolute;
+                        border-radius: 1rem;
+                        background-color: $navBar-color;
+                    }
+                    &::after{
+                        content: '';
+                        top: 11px;
+                        z-index: 3;
+                        width: 100%;
+                        height: 4px;
+                        position: absolute;
+                        border-radius: 1rem;
+                        background-color: $navBar-color;
+                    }
+                }
+
+                
+            }
+
+
+        &_logo{
+            @include flex-center;
+            width: 80%;
+            flex: 80%;
+        }    
+
+        &_navBar{
+            font-family: $font_Fira--Sans;
+            position: absolute;
+            display: none;
+            width: 100%;
+            flex: 100%;
+
+            
+
+        }
+        
+        &_icon{
+            @include flex-center;
+            width: 10%;
+            flex: 10%;
+        }
+    }
+
+    svg{
+        position: absolute;
+        width: 100%;
+        bottom: -1rem;
+        z-index: 2;
+    }
+
+    &_box--text, &_box--img{
+        max-width: 100%;
+        max-height: 50%;
+        flex: 100%;
+        padding: 12px;
+    }
+
+    &_box--text{
+        order: 2;
+        justify-content: center;
+
+        .banner_box--tittle{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 12px;
+
+            h1{
+                font-size: 2rem;
+                font-family: $font_Fira--Sans;
+                font-weight: bold;
+                color: #483939;
+            }
+
+            p{
+                font-family: $font_Fira--Sans;
+                font-weight: 400;
+                color: #b6a492;
+                margin-top: 0.34rem;
+            }
+
+            button{
+                width: 90%;
+                padding: 1.5rem 1.7rem;
+                margin: 0 auto;
+                border-radius: 0.30rem;
+                text-align: center;
+                margin-top: 1rem;
+                font-size: 1rem;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                color: #ffffff;
+                box-shadow: 2px 15px 12px -6px rgba(0,0,0,0.27);
+                background-color: #f6914e;
+
+                &:hover{
+                    background-color: #e07a36;
+                    transition: $transition;
+                }
+            }
+            
+        }
+    } // this is the banner box tittle division end
+    
+    &_box--img{
+        order: 1;
+        display: flex;
+        justify-content: center;
+
+        div{
+            @include flex-center;
+            width: 100%;
+            margin-top: 4rem;
+
+            img{
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+
+} // this is the end of banner division 
+
+.wave{
+    max-width: 100%;
+    position: relative;
+    font-family: $font_Fira--Sans;
+
+    &_para--container, &_para--container2{
+        max-width: 100%;
+        // border-radius: 0 10% 0 0;
+        right: 0;
+        padding: 2rem 3px;
+        z-index: 2;
+        @include wave-color(#fcf4ef);
+        text-align: center;
+
+        .logo-crcle-container{
+            width: 35%;
+            margin: 1rem auto;
+            padding: 12px;
+        
+            img{
+                width: 60%;
+                height: auto;
+            }
+        }
+
+        h1{
+            color: #483939;
+            font-size: 1.5rem;
+        }
+        p{
+            width: 100%;
+            color: #b59b8b;
+        }
+    }
+
+    &_para--container2{
+        @include wave-color(#ffffff);
+    }
+
+    svg{
+        position: absolute;
+    }
+} // this is the  end of wave div
+
+
+.images-container{
+    @include flex-center;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: #fcf4ef;
+
+    &_box--img1{
+        background: url('../images/image1.jpg')no-repeat center;
+        @include bgImage-style;
+
+        &--discription{
+            @include discriptions;
+        }
+    }
+
+    &_box--img2{
+        background: url('../images/image2.jpg')no-repeat center;
+        @include bgImage-style;
+
+        &--discription{
+            @include discriptions;
+        }
+    }
+
+    &_box--img3{
+        background: url('../images/image3.jpg')no-repeat center;
+        @include bgImage-style;
+
+        &--discription{
+            @include discriptions;
+        }
+    }
+}// this ist the image container end
+
+.wave2{
+    position: relative;
+    bottom: -1rem;
+    max-width: 100%;
+}

@@ -1,0 +1,193 @@
+@import '_mixin--var.scss';
+
+@media only screen and (min-width: 768px){
+    .banner{
+        height: 900px!important;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row!important;
+
+        .header{
+            width: 100%;
+            top: 1rem;
+            right: 0;
+            @include flex-center;
+            padding: 12px;
+
+            &_navBtn{
+                display: none!important;
+            }
+
+            &_logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 20%!important;
+                width: 20%!important;
+                // border: 1px solid black;
+            }
+            &_navBar{
+                position: relative!important;
+                display: block!important;
+                width: 70%;
+                flex: 70%;
+                // border: 1px solid black;
+
+                nav{
+                    ul{
+                        position: relative;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        font-weight: 400!important;
+                        color: #a79186!important;
+
+                        li{
+                            list-style-type: none!important;
+                            display: inline-block!important;
+                            margin-left: 1rem;
+                
+                        }
+                        .list-left{
+                            width: 50%;
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+
+                        .list-right{
+                            width: 50%;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+            &_icon{
+                display: flex;
+                align-items: center;
+                flex: 10%;
+                width: 10%;
+                // border: 1px solid black;
+
+                img{
+                    margin-left: 1rem;
+                }
+            }
+ 
+        } // this is the end of header
+
+        &_box--text, &_box--img{
+            max-height: 100%!important;
+        }
+
+        &_box--text{
+            flex: 45%!important;
+            width: 45%!important;
+            order: 1!important;
+            padding-left: 2rem!important;
+            @include flex-center;
+
+            .banner_box--tittle{
+                text-align: left!important;
+                width: 100%!important;
+                height: 500px!important;
+                margin-left: 1rem!important;
+
+                h1{
+                    font-size: 3.5rem!important;
+                    width: 96%!important;
+                }
+
+                p{
+                    margin-top: 1.3rem!important;
+                    font-size: 1rem;
+                    font-weight: 700!important;
+                    letter-spacing: 0.1rem;
+                }
+
+                button{
+                    width: 50%!important;
+                    font-size: 1.4rem!important;
+                    margin-top: 1.3rem!important;
+                    padding: 1.3rem 1.7rem!important;
+                }
+            }
+        }
+
+
+        &_box--img{
+            flex: 55%!important;
+            width: 55%!important;
+            order: 2!important;
+            @include flex-center-important;
+    
+            div{
+                width: 70%!important;
+                height: 500px!important;
+                margin-top: -17rem!important; 
+    
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    
+    }
+
+    .wave{
+
+        h1{
+            font-size: 2rem!important;
+        }
+
+        p{
+            font-size: 1.1rem!important;
+            width: 40%!important;
+            margin: 0 auto;
+        }
+
+        svg{
+            border-radius: 0 30% 0 0;
+            height: auto!important;
+            bottom: -0.4rem!important;
+            position: relative;
+        }
+
+        &_para--container, &_para--container2{
+
+            .logo-crcle-container{
+                width: 30%!important;
+                margin: 0 auto;
+            
+                img{
+                    width: 20%!important;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .images-container{
+        flex-direction: row!important;
+        gap: 5rem;
+        height: 100vh!important;
+        overflow: auto!important;
+
+        &_box--img1, &_box--img2, &_box--img3{
+            width: 20%!important;
+            margin: 0 1rem 0 1rem!important;
+            border-radius: 1.6rem!important;
+            
+        }
+
+      
+    }
+} // this is the banner division end
+
+
+
+
+
+
